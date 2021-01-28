@@ -84,7 +84,7 @@ router.post(
   })
 );
 
-router.get(
+app.get(
   "/userBlogs",
   asyncHandler(async (req, res) => {
     await UserBlogModal.find().then((data) => {
