@@ -92,7 +92,7 @@ class UserBlogs extends Component {
       async () => {
         await axios
           .post(
-            `http://localhost:9999/api/userBlogs/${this.state.userSignupId}`,
+            `https://blog-application-mern.herokuapp.com/api/userBlogs/${this.state.userSignupId}`,
             this.state.userBlogData
           )
           .then((res) => {
@@ -108,7 +108,9 @@ class UserBlogs extends Component {
   };
 
   getBlogData = async () => {
-    const { data } = await axios.get("http://localhost:9999/api/userBlogs");
+    const { data } = await axios.get(
+      "https://blog-application-mern.herokuapp.com/api/userBlogs"
+    );
     const userBlogsData = await data.filter((obj) => {
       return obj.userId === this.state.userSignupId;
     });
@@ -118,7 +120,9 @@ class UserBlogs extends Component {
   };
 
   fetchUserBlogData = async () => {
-    const { data } = await axios.get("http://localhost:9999/api/userBlogs");
+    const { data } = await axios.get(
+      "https://blog-application-mern.herokuapp.com/api/userBlogs"
+    );
     const userBlogsData = await data.filter((obj) => {
       return obj.userId === this.state.userSignupId;
     });
@@ -133,7 +137,9 @@ class UserBlogs extends Component {
 
   deleteUserBlog = async (id) => {
     await axios
-      .post(`http://localhost:9999/api/userBlogs/deleteBlog/${id}`)
+      .post(
+        `https://blog-application-mern.herokuapp.com/api/userBlogs/deleteBlog/${id}`
+      )
       .then((res) => {
         if (res.data === "Blog Deleted Successfully") {
           alert(res.data);

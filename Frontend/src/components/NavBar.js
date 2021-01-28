@@ -49,7 +49,7 @@ const NavBar = () => {
 
   const handleUserSignUp = async () => {
     await axios
-      .post("http://localhost:9999/api/signup", {
+      .post("https://blog-application-mern.herokuapp.com/api/signup", {
         username,
         userEmailAddress,
         userPassword,
@@ -77,7 +77,7 @@ const NavBar = () => {
 
   const userLogin = async () => {
     await axios
-      .post("http://localhost:9999/api/login", {
+      .post("https://blog-application-mern.herokuapp.com/api/login", {
         userEmailAddress,
         userPassword,
       })
