@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.user-avatar {
+  height: 40px;
+  width: 40px;
+  background-color: #eeeeee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.fresh-blogs {
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.fresh-blogs:hover .blog-text {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.blog-text {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.blog-text > ul,
+.blog-text,
+.blog-text > ul > li,
+.user-avatar-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-text > ul {
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.blog-text > ul > li {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s;
+}
+
+.blog-card {
+  transition: all 0.5s;
+}
+
+.blog-card:hover {
+  transform: translateY(-3%);
+  cursor: pointer;
+}
+
+.user-avatar-large {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition: all 0.5s;
+}
+
+.user-avatar-large:hover {
+  cursor: pointer;
+}
+
+.user-blog-profile {
+  border-bottom: 1px solid #b9b6b6;
+}
+
+@media (min-width: 950px) {
+  .nav-list {
+    margin-left: 10%;
+  }
+
+  .user-avatar-large {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    font-size: 2rem;
+  }
+
+  #username {
+    font-size: 3.3rem;
+  }
+
+  #userEmailAddress {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .nav-list {
+    margin-left: 23%;
+  }
+}
